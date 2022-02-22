@@ -1,23 +1,25 @@
+const MAX_LENGTH = 140;
+const ALERT_MESSAGE = 'Передайте число больше 0 для min';
+
 // Функция, возвращающая случайное целое число из переданного диапазона включительно.
 // Учтите, что диапазон может быть только положительный, включая ноль. А также придумайте, как функция должна вести себя, если передать значение «до» меньшее, чем значение «от», или равное ему.
 
-function randomNumber(min, max) {
-  if (min <= 0 ) {
-    const ALERT_MESSAGE= 'Передайте номер больше 0 для min';
-    return ALERT_MESSAGE;
+const getRandomNumber = (min, max) => {
+  if (min <= 0 || min >= max) {
+    throw new Error(ALERT_MESSAGE);
   }
-  const INNER_NUMBER = Math.random()*(max-min) + min;
+  const INNER_NUMBER = Math.random() * (max-min) + min;
   return Math.floor(INNER_NUMBER);
-}
-randomNumber(-2, 100);
-
+};
+getRandomNumber(-2, 100);
 
 // Функция для проверки максимальной длины строки. Будет использоваться для проверки длины введённого комментария, но должна быть универсальна. Пример использования функции:
 // имя_функции(проверяемая_строка, максимальная_длина); // Результат: true, если строка проходит по длине, и false — если не проходит
 
-const MAX_LENGTH = 30;
-function isStringLength(a) {
-  return (a.length < MAX_LENGTH);
-}
 
-isStringLength('efwefwefweff');
+// const MAX_LENGTH = 140; Стала необязательной эта строка
+
+function isStringLength(str, maxLength) {
+  return (str.length < maxLength);
+}
+isStringLength('efwefwefweff', MAX_LENGTH);
