@@ -8,16 +8,13 @@ const getRandomNumber = (min, max) => {
   if (min <= 0 || min >= max) {
     throw new Error(ALERT_MESSAGE);
   }
-  const INNER_NUMBER = Math.random() * (max-min) + min;
-  return Math.floor(INNER_NUMBER);
+  const inner_number = Math.random() * (max - min) + min;
+  return Math.floor(inner_number);
 };
 getRandomNumber(-2, 100);
 
 // Функция для проверки максимальной длины строки. Будет использоваться для проверки длины введённого комментария, но должна быть универсальна. Пример использования функции:
 // имя_функции(проверяемая_строка, максимальная_длина); // Результат: true, если строка проходит по длине, и false — если не проходит
-
-
-// const MAX_LENGTH = 140; Стала необязательной эта строка
 
 function isStringLength(str, maxLength) {
   return (str.length < maxLength);
