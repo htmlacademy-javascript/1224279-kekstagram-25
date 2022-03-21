@@ -1,7 +1,7 @@
 # Личный проект «Кекстаграм»
 
 * Студент: [Серёжа Потапов](https://up.htmlacademy.ru/javascript/25/user/1224279).
-* Наставник: [алексей Хабиров](https://htmlacademy.ru/profile/alex_khab).
+* Наставник: [Алексей Хабиров](https://htmlacademy.ru/profile/alex_khab).
 
 ---
 
